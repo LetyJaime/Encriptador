@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador ALura</title>
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <img class="header__logo" src="./img/Logo.svg" alt="Logotipo Alura">
+            </div>
+        </header>
+        <main>
+            <div class="main">
+                <div class="left">
+                    <textarea class="ingreso__texto" placeholder="Ingresa el Texto Aquí" name="" id="ingresoTexto" cols="30" rows="10"></textarea>
+                    <div class="left__footer">
+                        <img src="./img/bi_exclamation-circle-fill.svg" alt="Exclamación">
+                        <span class="left__info">Solo letras minúsculas y sin acentos</span>
+                        <div class="left__botones">
+                            <button id="botonEncriptar" class="boton__encriptar">Encriptar</button>
+                            <button id="botonDesencriptar" class="boton__desencriptar">Desencriptar</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="right" class="right">
+                    <img id="rightMuneco" class="right__muneco" src="./img/Muneco.svg" alt="Muñeco">
+                    <div class="right__textos">
+                        <textarea id="mensajeFinal" class="mensaje__final" placeholder="Ningun mensaje fue encontrado"></textarea>
+                        <p id="rightInfo" class="right__info">Ingresa el texto que desees encriptar o desencriptar.</p>
+                    </div>
+                    <button id="botonCopiar" class="boton__copiar oculto">Copiar</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <section class="contacto">
+                <p class="colum-footer1">Sitio desarrollado por:</p>
+                <p class="titulo-contacto"> Leticia Jaime</p>
+                <img class="email" src="./img/Icono-Gmail.svg" alt="Icono Gmail">
+                <p><a href="mailto:lety.jaime@gmail.com">lety.jaime@gmail.com</a>
+                </p>
+                <img class="linkedin" src="./img/Icono-Linkedin.svg" alt="Icono Linkedin">
+                <p><a target="_blank" href="https://www.linkedin.com/in/leticia-jaime/">https://www.linkedin.com/in/leticia-jaime/</a>
+                </p>
+                <p class="colum-footer1 atribucion">Icono Gmail:</p>
+                <p class="atribucion"><a href="https://www.flaticon.com/free-icons/gmail" title="gmail icons">Gmail icons created by Freepik - Flaticon</a></p>
+                <p class="colum-footer1 atribucion">Icono LinkedIn:</p>
+                <p class="atribucion"><a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by Md Tanvirul Haque - Flaticon</a></p>
+            </section>
+        </footer>
+        <script src="./js/script.js"></script>
+    </body>
+</html>

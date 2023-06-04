@@ -1,0 +1,257 @@
+:root{
+    --color--blanco: #FFFFFF;
+    --color-darkblue300: #0A3871;
+    --color-darkblue200: #356EA9;
+    --color-lightblue400:#D8DFE8;
+    --color-gray400: #495057;
+    --font-inter: "Inter","Sans Serif";
+}
+
+body{
+    background: var(--color--blanco);
+    font-family: var(--font-inter);
+}
+
+textarea{
+    font-family: var(--font-inter);
+}
+
+/* Header */
+.header{
+    width: 90%;
+    margin: auto;
+}
+
+.header__logo{
+    margin-top: 40px;
+}
+
+/* Main */
+.main{
+    width: 80.5%;
+    margin: auto 40px auto auto ;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    min-height: calc(100vh -91px - 72px);
+    align-items: end;
+}
+
+.left{
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ingreso__texto{
+    width: 80%;
+    font-size: 32px;
+    color: var(--color-darkblue300);
+    resize: none;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.ingreso__texto::placeholder{
+    color: var(--color-darkblue300);
+}
+
+.left__info{
+    font-size: 12px;
+    color: var(--color-gray400);
+}
+
+.left__botones{
+    display: flex;
+    gap: 24px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.right{
+    display: flex;
+    height: calc(100% + 48px);
+    border-radius: 32px;
+    padding: 32px;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 4px 32px -8px rgb(0, 0, 0.08);
+}
+
+.right.ajustar{
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.right__muneco{
+    width: 100%;
+}
+
+.right__info{
+    color: var(--color-darkblue200);
+    font-size: 16px;
+    text-align: center;
+    font-family: var(--font-inter);
+}
+
+.boton__encriptar, .boton__desencriptar, .boton__copiar{
+    max-width: 328px;
+    min-width: 160px;
+    width: 40%;
+    height: 67px;
+    border-radius: 24px;
+    border: 2px solid var(--color-darkblue300);
+    outline: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.boton__encriptar{
+    background: var(--color-darkblue300);
+    color: white;
+    font-size: 16px;
+}
+
+.boton__desencriptar {
+    background: var(--color-lightblue400);
+    color: var(--color-darkblue300);
+    font-size: 16px;
+}
+
+.boton__copiar{
+    width: 100%;
+    background: var(--color-lightblue400);
+    color: var(--color-darkblue300);
+    font-size: 16px;
+    display: none;
+}
+
+.oculto{
+    display: none;
+}
+
+.mensaje__final{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--color-gray400);
+    background: none;
+    border: none;
+    outline: none;
+    resize: none;
+    width: 100%;
+}
+
+.mensaje__final.ajustar{
+    text-align: justify;
+    font-weight: 400;
+    height: 400px;
+    height: 80%;
+    min-height: 55vh;
+}
+
+.contacto{
+    margin: 3em;
+    border-radius: 50px;
+    box-shadow: 0px 4px 32px -8px rgb(0, 0, 0.08);
+    justify-content: center;
+    padding: 1em;
+    font-size: small;
+    color: var(--color-darkblue300);
+    font-weight: 600;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 1em;
+    justify-content: space-between;
+    margin-left: 2em;
+}
+
+.colum-footer1{
+    text-align: end;
+    color: var(--color-gray400);
+}
+
+.titulo-contacto{
+    color: var(--color-darkblue300);
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+.email, .linkedin{
+    margin-left: 20em;
+    position: relative;
+    bottom: -9px;
+}
+
+.atribucion{
+    font-size: 8px;
+}
+
+@media screen and (max-width: 800px) {
+    .main{
+    grid-template-columns: 1fr;
+    grid-template-rows: 75% auto;
+    width: auto;
+    margin: auto 40px;
+    }
+
+    .right__muneco{
+    display: none;
+    }
+
+    .left__botones{
+    justify-content: center;
+    }
+
+    .right{
+    height: 100%;
+    }
+    .boton__encriptar, .boton__desencriptar{
+    width: 45%
+    }
+
+    .boton__desencriptar{
+        background-color: var(--color--blanco);
+        margin-bottom: 25px;
+    }
+
+    .mensaje__final.ajustar{
+        min-height: 200px;
+        width: 75vw;
+    }
+
+    .contacto{
+        margin-top: 13em;
+        box-shadow: 5px 1px 20px -8px rgb(0, 0, 0.08);
+    }
+
+    .email, .linkedin{
+        margin-left: 10em;
+        position: relative;
+        bottom: -9px;
+        }
+}
+
+/* media celular */
+@media screen and (max-width:500px){
+.main{
+    margin: auto 16px;
+}
+
+.boton__encriptar, .boton__desencriptar{
+    max-width: none;
+    width: 100%
+    }
+
+.contacto{
+    margin-top: 10em;
+    box-shadow: 8px 5px 25px -9px rgb(0, 0, 0.9);
+}
+
+.email, .linkedin{
+    margin-left: 8em;
+    }
+}
